@@ -1,0 +1,45 @@
+<script type="text/javascript">
+  RED.nodes.registerType('hubo',{
+    category: 'config',
+    defaults: {
+      name: {value: ''},
+      address: {required: true, value: 0x20},// validate:RED.validators.number()},
+      device: {value: 1, validate:RED.validators.number()},
+      inputs: {value: 8, required:true, validate:RED.validators.number()},
+      outputs: {value: 8, required:true, validate:RED.validators.number()},
+      interval: {value: 100, required:true, validate:RED.validators.number()}
+    },
+    label: function() {
+      return this.name || 'Hubo 0x' + this.address.toString(16)
+    }
+  })
+</script>
+
+<script type="text/x-red" data-template-name="hubo">
+  <div class="form-row">
+    <label for="node-config-input-name"><i class="icon-bookmark"></i> Name</label>
+    <input type="text" id="node-config-input-name">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-address"><i class="icon-bookmark"></i> Address</label>
+    <input type="text" id="node-config-input-address" placeholder="0x20">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-device"><i class="icon-bookmark"></i> Device / Bus number</label>
+    <input type="text" id="node-config-input-device" placeholder="1">
+  </div>
+  
+  
+  <div class="form-row">
+    <label for="node-config-input-inputs"><i class="icon-bookmark"></i> Inputs</label>
+    <input type="text" id="node-config-input-inputs">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-outputs"><i class="icon-bookmark"></i> Outputs</label>
+    <input type="text" id="node-config-input-outputs">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-interval"><i class="icon-bookmark"></i> Delay in ms</label>
+    <input type="text" id="node-config-input-interval">
+  </div>
+</script>

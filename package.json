@@ -10,6 +10,9 @@
     "i2c-bus": "^3.2.0"
   },
   "author": "Philipp Waldmann <philipp@wu-server.com>",
+  "repository": {
+    "url": "https://github.com/PhilWaldmann/node-red-contrib-hubo"
+  },
   "license": "ISC",
   "keywords": [ "node-red", "hubo", "i2c", "raspberry"],
   "node-red" : {

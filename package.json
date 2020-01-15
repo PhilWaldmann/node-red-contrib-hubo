@@ -1,20 +1,20 @@
 {
   "name": "node-red-contrib-hubo",
-  "version": "0.1.2",
-  "description": "Node-RED nodes to read/write digital inputs/outputs of raspberry pi Hubo",
+  "version": "0.1.4",
+  "description": "Node-RED nodes to read/write digital inputs/outputs of raspberry pi Hubo/MCP23017",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "i2c-bus": "^3.2.0"
+    "i2c-bus": "^5.1.0"
   },
   "author": "Philipp Waldmann <philipp@wu-server.com>",
   "repository": {
     "url": "https://github.com/PhilWaldmann/node-red-contrib-hubo"
   },
   "license": "ISC",
-  "keywords": [ "node-red", "hubo", "i2c", "raspberry"],
+  "keywords": [ "node-red", "hubo", "i2c", "raspberry", "MCP23017"],
   "node-red" : {
     "nodes": {
       "hubo": "hubo.js",
